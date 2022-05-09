@@ -63,10 +63,10 @@
           -->
           <Property Name="toolchain" Default="XTGccElfNewlib">
             <!--
-            表示可以支持当前device的工具系列，可以有多个选项，在 https://github.com/CDKModues/ToolchainManifest.git 中
-            toolchain.xml的Series字段值；可选值有通用的RISCV32、RISCV64，也可以有厂商自定义的类型，如CKV1、CKV2；
+            表示可以支持当前device的工具ID，可以有多个选项，在 https://github.com/CDKModues/ToolchainManifest.git 中
+            toolchain.xml的ID字段值；
             -->
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <!--
           是否支持hardfloat选项，Value值yes：支持，no：不支持
@@ -79,7 +79,11 @@
           <!--
           是否支持半主机调试，Value值yes：支持，no：不支持
           -->
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <!--
+          半主机调试，启动调试器的选项，可选项
+          -->
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <!--
           表示cpu编译选项
           例如-mabi=ilp32e -mtune=e902 -march=rv32ecxtheadse，或者-mcpu=ck802
@@ -137,11 +141,12 @@
         </Device>
         <Device Name="E902M">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32e -mtune=e902 -march=rv32emcxtheadse"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E902"/>
@@ -156,11 +161,12 @@
         </Device>
         <Device Name="E902T">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32e -mtune=e902 -march=rv32ecxtheadse"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E902"/>
@@ -175,11 +181,12 @@
         </Device>
         <Device Name="E902MT">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32e -mtune=e902 -march=rv32emcxtheadse"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E902"/>
@@ -194,11 +201,12 @@
         </Device>
         <Device Name="E906">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=e906 -march=rv32imacxtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E906"/>
@@ -213,11 +221,12 @@
         </Device>
         <Device Name="E906F">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32f -mtune=e906 -march=rv32imafcxtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E906"/>
@@ -232,11 +241,12 @@
         </Device>
         <Device Name="E906FD">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32d -mtune=e906 -march=rv32imafdcxtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E906"/>
@@ -251,11 +261,12 @@
         </Device>
         <Device Name="E906FDP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32d -mtune=e906 -march=rv32imafdcpzpsfoperand_xtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E906"/>
@@ -270,11 +281,12 @@
         </Device>
         <Device Name="E906FP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32f -mtune=e906 -march=rv32imafcpzpsfoperand_xtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E906"/>
@@ -289,11 +301,12 @@
         </Device>
         <Device Name="E906P">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=e906 -march=rv32imacpzpsfoperand_xtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E906"/>
@@ -308,11 +321,12 @@
         </Device>
         <Device Name="E907">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=e907 -march=rv32imacxtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E907"/>
@@ -327,11 +341,12 @@
         </Device>
         <Device Name="E907F">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32f -mtune=e907 -march=rv32imafcxtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E907"/>
@@ -346,11 +361,12 @@
         </Device>
         <Device Name="E907FD">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32d -mtune=e907 -march=rv32imafdcxtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E907"/>
@@ -365,11 +381,12 @@
         </Device>
         <Device Name="E907FDP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32d -mtune=e907 -march=rv32imafdcpzpsfoperand_xtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E907"/>
@@ -384,11 +401,12 @@
         </Device>
         <Device Name="E907FP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32f -mtune=e907 -march=rv32imafcpzpsfoperand_xtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E907"/>
@@ -403,11 +421,12 @@
         </Device>
         <Device Name="E907P">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=e907 -march=rv32imacpzpsfoperand_xtheade"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E907"/>
@@ -422,11 +441,12 @@
         </Device>
         <Device Name="C906">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=lp64 -mtune=c906 -march=rv64imacxtheadc -mcmodel=medany"/>
           <Property Name="arch-type" Value="arch64"/>
           <Property Name="url" Value="https://www.t-head.cn/product/C906"/>
@@ -441,11 +461,12 @@
         </Device>
         <Device Name="C906FD">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=lp64d -mtune=c906 -march=rv64imafdcxtheadc -mcmodel=medany"/>
           <Property Name="arch-type" Value="arch64"/>
           <Property Name="url" Value="https://www.t-head.cn/product/C906"/>
@@ -460,11 +481,12 @@
         </Device>
         <Device Name="C906FDV">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=lp64d -mtune=c906 -march=rv64imafdcv0p7_zfh_xtheadc -mcmodel=medany"/>
           <Property Name="arch-type" Value="arch64"/>
           <Property Name="url" Value="https://www.t-head.cn/product/C906"/>
@@ -479,11 +501,12 @@
         </Device>
         <Device Name="C910">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=lp64d -mtune=c910 -march=rv64imafdcxtheadc -mcmodel=medany"/>
           <Property Name="arch-type" Value="arch64"/>
           <Property Name="url" Value="https://www.t-head.cn/product/C910"/>
@@ -498,11 +521,12 @@
         </Device>
         <Device Name="C920">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
           <Property Name="cpu-args" Value="-mabi=lp64d -mtune=c920 -march=rv64imafdcv0p7_zfh_xtheadc -mcmodel=medany"/>
           <Property Name="arch-type" Value="arch64"/>
           <Property Name="url" Value="https://www.t-head.cn/product/C910"/>
@@ -521,7 +545,7 @@
       <Devices>
         <Device Name="RV32EC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -540,7 +564,7 @@
         </Device>
         <Device Name="RV32EMC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -559,7 +583,7 @@
         </Device>
         <Device Name="RV32I">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -578,7 +602,7 @@
         </Device>
         <Device Name="RV32IC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -597,7 +621,7 @@
         </Device>
         <Device Name="RV32IM">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -616,7 +640,7 @@
         </Device>
         <Device Name="RV32IMAC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -635,7 +659,7 @@
         </Device>
         <Device Name="RV32IMACP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -654,7 +678,7 @@
         </Device>
         <Device Name="RV32IMAFC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -673,7 +697,7 @@
         </Device>
         <Device Name="RV32IMAFCP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -692,7 +716,7 @@
         </Device>
         <Device Name="RV32IMAFDC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -711,7 +735,7 @@
         </Device>
         <Device Name="RV32IMAFDCP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -730,7 +754,7 @@
         </Device>
         <Device Name="RV32IMC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -753,7 +777,7 @@
       <Devices>
         <Device Name="E801">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -772,7 +796,7 @@
         </Device>
         <Device Name="E802">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -791,7 +815,7 @@
         </Device>
         <Device Name="E802T">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -810,7 +834,7 @@
         </Device>
         <Device Name="E803">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -829,7 +853,7 @@
         </Device>
         <Device Name="E803T">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -848,7 +872,7 @@
         </Device>
         <Device Name="E804D">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -867,7 +891,7 @@
         </Device>
         <Device Name="E804DT">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -886,7 +910,7 @@
         </Device>
         <Device Name="E804F">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -905,7 +929,7 @@
         </Device>
         <Device Name="E804FT">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -924,7 +948,7 @@
         </Device>
         <Device Name="E804DF">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -943,7 +967,7 @@
         </Device>
         <Device Name="E804DFT">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -962,7 +986,7 @@
         </Device>
         <Device Name="C807">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -981,7 +1005,7 @@
         </Device>
         <Device Name="C807F">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1000,7 +1024,7 @@
         </Device>
         <Device Name="C810">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1019,7 +1043,7 @@
         </Device>
         <Device Name="C810V">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1038,7 +1062,7 @@
         </Device>
         <Device Name="C810T">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1057,7 +1081,7 @@
         </Device>
         <Device Name="C810TV">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1076,7 +1100,7 @@
         </Device>
         <Device Name="C860">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1095,7 +1119,7 @@
         </Device>
         <Device Name="C860V">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -1114,7 +1138,7 @@
         </Device>
         <Device Name="S802">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1133,7 +1157,7 @@
         </Device>
         <Device Name="S802T">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1152,7 +1176,7 @@
         </Device>
         <Device Name="S803">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1171,7 +1195,7 @@
         </Device>
         <Device Name="S803T">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1190,7 +1214,7 @@
         </Device>
         <Device Name="R807">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1209,7 +1233,7 @@
         </Device>
         <Device Name="R807F">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1228,7 +1252,7 @@
         </Device>
         <Device Name="I805">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -1247,7 +1271,7 @@
         </Device>
         <Device Name="I805F">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="no"/>
@@ -1270,7 +1294,7 @@
       <Devices>
         <Device Name="CK801">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1289,7 +1313,7 @@
         </Device>
         <Device Name="CK801t">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1308,7 +1332,7 @@
         </Device>
         <Device Name="CK802">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1327,7 +1351,7 @@
         </Device>
         <Device Name="CK802j">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1346,7 +1370,7 @@
         </Device>
         <Device Name="CK802t">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1365,7 +1389,7 @@
         </Device>
         <Device Name="CK803">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1384,7 +1408,7 @@
         </Device>
         <Device Name="CK803e">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1403,7 +1427,7 @@
         </Device>
         <Device Name="CK803ef">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1422,7 +1446,7 @@
         </Device>
         <Device Name="CK803efh">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1441,7 +1465,7 @@
         </Device>
         <Device Name="CK803efhr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1460,7 +1484,7 @@
         </Device>
         <Device Name="CK803efhr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1479,7 +1503,7 @@
         </Device>
         <Device Name="CK803efhr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1498,7 +1522,7 @@
         </Device>
         <Device Name="CK803efht">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1517,7 +1541,7 @@
         </Device>
         <Device Name="CK803efhtr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1536,7 +1560,7 @@
         </Device>
         <Device Name="CK803efhtr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1555,7 +1579,7 @@
         </Device>
         <Device Name="CK803efhtr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1574,7 +1598,7 @@
         </Device>
         <Device Name="CK803efr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1593,7 +1617,7 @@
         </Device>
         <Device Name="CK803efr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1612,7 +1636,7 @@
         </Device>
         <Device Name="CK803efr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1631,7 +1655,7 @@
         </Device>
         <Device Name="CK803eft">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1650,7 +1674,7 @@
         </Device>
         <Device Name="CK803eftr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1669,7 +1693,7 @@
         </Device>
         <Device Name="CK803eftr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1688,7 +1712,7 @@
         </Device>
         <Device Name="CK803eftr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1707,7 +1731,7 @@
         </Device>
         <Device Name="CK803eh">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1726,7 +1750,7 @@
         </Device>
         <Device Name="CK803ehr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1745,7 +1769,7 @@
         </Device>
         <Device Name="CK803ehr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1764,7 +1788,7 @@
         </Device>
         <Device Name="CK803ehr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1783,7 +1807,7 @@
         </Device>
         <Device Name="CK803eht">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1802,7 +1826,7 @@
         </Device>
         <Device Name="CK803ehtr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1821,7 +1845,7 @@
         </Device>
         <Device Name="CK803ehtr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1840,7 +1864,7 @@
         </Device>
         <Device Name="CK803ehtr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1859,7 +1883,7 @@
         </Device>
         <Device Name="CK803er1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1878,7 +1902,7 @@
         </Device>
         <Device Name="CK803er2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1897,7 +1921,7 @@
         </Device>
         <Device Name="CK803er3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1916,7 +1940,7 @@
         </Device>
         <Device Name="CK803et">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1935,7 +1959,7 @@
         </Device>
         <Device Name="CK803etr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1954,7 +1978,7 @@
         </Device>
         <Device Name="CK803etr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1973,7 +1997,7 @@
         </Device>
         <Device Name="CK803etr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -1992,7 +2016,7 @@
         </Device>
         <Device Name="CK803f">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2011,7 +2035,7 @@
         </Device>
         <Device Name="CK803fh">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2030,7 +2054,7 @@
         </Device>
         <Device Name="CK803fhr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2049,7 +2073,7 @@
         </Device>
         <Device Name="CK803fhr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2068,7 +2092,7 @@
         </Device>
         <Device Name="CK803fhr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2087,7 +2111,7 @@
         </Device>
         <Device Name="CK803fr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2106,7 +2130,7 @@
         </Device>
         <Device Name="CK803fr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2125,7 +2149,7 @@
         </Device>
         <Device Name="CK803fr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2144,7 +2168,7 @@
         </Device>
         <Device Name="CK803ft">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2163,7 +2187,7 @@
         </Device>
         <Device Name="CK803ftr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2182,7 +2206,7 @@
         </Device>
         <Device Name="CK803ftr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2201,7 +2225,7 @@
         </Device>
         <Device Name="CK803ftr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2220,7 +2244,7 @@
         </Device>
         <Device Name="CK803h">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2239,7 +2263,7 @@
         </Device>
         <Device Name="CK803hr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2258,7 +2282,7 @@
         </Device>
         <Device Name="CK803hr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2277,7 +2301,7 @@
         </Device>
         <Device Name="CK803hr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2296,7 +2320,7 @@
         </Device>
         <Device Name="CK803ht">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2315,7 +2339,7 @@
         </Device>
         <Device Name="CK803htr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2334,7 +2358,7 @@
         </Device>
         <Device Name="CK803htr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2353,7 +2377,7 @@
         </Device>
         <Device Name="CK803htr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2372,7 +2396,7 @@
         </Device>
         <Device Name="CK803r1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2391,7 +2415,7 @@
         </Device>
         <Device Name="CK803r2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2410,7 +2434,7 @@
         </Device>
         <Device Name="CK803r3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2429,7 +2453,7 @@
         </Device>
         <Device Name="CK803s">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2448,7 +2472,7 @@
         </Device>
         <Device Name="CK803se">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2467,7 +2491,7 @@
         </Device>
         <Device Name="CK803sef">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2486,7 +2510,7 @@
         </Device>
         <Device Name="CK803seft">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2505,7 +2529,7 @@
         </Device>
         <Device Name="CK803sf">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2524,7 +2548,7 @@
         </Device>
         <Device Name="CK803st">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2543,7 +2567,7 @@
         </Device>
         <Device Name="CK803t">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2562,7 +2586,7 @@
         </Device>
         <Device Name="CK803tr1">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2581,7 +2605,7 @@
         </Device>
         <Device Name="CK803tr2">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2600,7 +2624,7 @@
         </Device>
         <Device Name="CK803tr3">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2619,7 +2643,7 @@
         </Device>
         <Device Name="CK804">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2638,7 +2662,7 @@
         </Device>
         <Device Name="CK804e">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2657,7 +2681,7 @@
         </Device>
         <Device Name="CK804ef">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2676,7 +2700,7 @@
         </Device>
         <Device Name="CK804efh">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2695,7 +2719,7 @@
         </Device>
         <Device Name="CK804efht">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2714,7 +2738,7 @@
         </Device>
         <Device Name="CK804eh">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2733,7 +2757,7 @@
         </Device>
         <Device Name="CK804eht">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2752,7 +2776,7 @@
         </Device>
         <Device Name="CK804eft">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2771,7 +2795,7 @@
         </Device>
         <Device Name="CK804et">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2790,7 +2814,7 @@
         </Device>
         <Device Name="CK804f">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2809,7 +2833,7 @@
         </Device>
         <Device Name="CK804fh">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2828,7 +2852,7 @@
         </Device>
         <Device Name="CK804ft">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2847,7 +2871,7 @@
         </Device>
         <Device Name="CK804h">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2866,7 +2890,7 @@
         </Device>
         <Device Name="CK804ht">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2885,7 +2909,7 @@
         </Device>
         <Device Name="CK804t">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -2904,7 +2928,7 @@
         </Device>
         <Device Name="CK805">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -2923,7 +2947,7 @@
         </Device>
         <Device Name="CK805e">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -2942,7 +2966,7 @@
         </Device>
         <Device Name="CK805ef">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="no"/>
@@ -2961,7 +2985,7 @@
         </Device>
         <Device Name="CK805eft">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="no"/>
@@ -2980,7 +3004,7 @@
         </Device>
         <Device Name="CK805et">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -2999,7 +3023,7 @@
         </Device>
         <Device Name="CK805f">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="no"/>
@@ -3018,7 +3042,7 @@
         </Device>
         <Device Name="CK805ft">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="no"/>
@@ -3037,7 +3061,7 @@
         </Device>
         <Device Name="CK805t">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -3056,7 +3080,7 @@
         </Device>
         <Device Name="CK807">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3075,7 +3099,7 @@
         </Device>
         <Device Name="CK807e">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3094,7 +3118,7 @@
         </Device>
         <Device Name="CK807ef">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3113,7 +3137,7 @@
         </Device>
         <Device Name="CK807f">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3132,7 +3156,7 @@
         </Device>
         <Device Name="CK810">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3151,7 +3175,7 @@
         </Device>
         <Device Name="CK810e">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3170,7 +3194,7 @@
         </Device>
         <Device Name="CK810ef">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3189,7 +3213,7 @@
         </Device>
         <Device Name="CK810eft">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3208,7 +3232,7 @@
         </Device>
         <Device Name="CK810et">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3227,7 +3251,7 @@
         </Device>
         <Device Name="CK810f">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3246,7 +3270,7 @@
         </Device>
         <Device Name="CK810ft">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3265,7 +3289,7 @@
         </Device>
         <Device Name="CK810ftv">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3284,7 +3308,7 @@
         </Device>
         <Device Name="CK810fv">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3303,7 +3327,7 @@
         </Device>
         <Device Name="CK810t">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3322,7 +3346,7 @@
         </Device>
         <Device Name="CK810tv">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3341,7 +3365,7 @@
         </Device>
         <Device Name="CK810v">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3360,7 +3384,7 @@
         </Device>
         <Device Name="CK860">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3379,7 +3403,7 @@
         </Device>
         <Device Name="CK860f">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3398,7 +3422,7 @@
         </Device>
         <Device Name="CK860fv">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="no"/>
@@ -3417,7 +3441,7 @@
         </Device>
         <Device Name="CK860v">
           <Property Name="toolchain" Default="CKV2ElfMinilib">
-            <supported-toolchain-series Value="CKV2"/>
+            <available-toolchains Value="CKV2ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
@@ -3440,7 +3464,7 @@
       <Devices>
         <Device Name="CK510">
           <Property Name="toolchain" Default="CKV1ElfMinilib">
-            <supported-toolchain-series Value="CKV1"/>
+            <available-toolchains Value="CKV1ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3459,7 +3483,7 @@
         </Device>
         <Device Name="CK510e">
           <Property Name="toolchain" Default="CKV1ElfMinilib">
-            <supported-toolchain-series Value="CKV1"/>
+            <available-toolchains Value="CKV1ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3478,7 +3502,7 @@
         </Device>
         <Device Name="CK520">
           <Property Name="toolchain" Default="CKV1ElfMinilib">
-            <supported-toolchain-series Value="CKV1"/>
+            <available-toolchains Value="CKV1ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3497,7 +3521,7 @@
         </Device>
         <Device Name="CK610">
           <Property Name="toolchain" Default="CKV1ElfMinilib">
-            <supported-toolchain-series Value="CKV1"/>
+            <available-toolchains Value="CKV1ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3516,7 +3540,7 @@
         </Device>
         <Device Name="CK610e">
           <Property Name="toolchain" Default="CKV1ElfMinilib">
-            <supported-toolchain-series Value="CKV1"/>
+            <available-toolchains Value="CKV1ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3535,7 +3559,7 @@
         </Device>
         <Device Name="CK610m">
           <Property Name="toolchain" Default="CKV1ElfMinilib">
-            <supported-toolchain-series Value="CKV1"/>
+            <available-toolchains Value="CKV1ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3554,7 +3578,7 @@
         </Device>
         <Device Name="CK610ef">
           <Property Name="toolchain" Default="CKV1ElfMinilib">
-            <supported-toolchain-series Value="CKV1"/>
+            <available-toolchains Value="CKV1ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3573,7 +3597,7 @@
         </Device>
         <Device Name="CK610mef">
           <Property Name="toolchain" Default="CKV1ElfMinilib">
-            <supported-toolchain-series Value="CKV1"/>
+            <available-toolchains Value="CKV1ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3592,7 +3616,7 @@
         </Device>
         <Device Name="CK610me">
           <Property Name="toolchain" Default="CKV1ElfMinilib">
-            <supported-toolchain-series Value="CKV1"/>
+            <available-toolchains Value="CKV1ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3611,7 +3635,7 @@
         </Device>
         <Device Name="CK610f">
           <Property Name="toolchain" Default="CKV1ElfMinilib">
-            <supported-toolchain-series Value="CKV1"/>
+            <available-toolchains Value="CKV1ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3630,7 +3654,7 @@
         </Device>
         <Device Name="CK610mf">
           <Property Name="toolchain" Default="CKV1ElfMinilib">
-            <supported-toolchain-series Value="CKV1"/>
+            <available-toolchains Value="CKV1ElfMinilib"/>
           </Property>
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="yes"/>
@@ -3656,6 +3680,8 @@
   在同一路径下Series以及Devices，在Extend的节点版本存在的device，覆盖；
   在Extend的版本不存在的device，添加进去；
   如果存在Extend属性，则当前Verison的定义需要放在Extend的Version之后；
+  available-toolchains字段是增加的模式，比如V1.0.0已经支持ToolID1，这里同一型号的Device，再增加ToolID2，
+  直接增加ToolID2一条，不要再添加ToolID1；
   -->
   <!-- 模板如下
   <Version Value="V1.0.1" Extend="V1.0.0">
@@ -3667,11 +3693,11 @@
       <Devices>
         <Device Name="E902M">
           <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchains Value="XTGccElfNewlib"/>
           </Property>
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
           <Property Name="cpu-args" Value="-mabi=ilp32e -mtune=e902 -march=rv32emcxtheadse"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.t-head.cn/product/E902"/>
