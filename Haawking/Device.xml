@@ -1,179 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Device>
-  <!--
-  Name是在CDK中用于显示的Device系列名称，建议具备一定可读性
-  -->
   <Name>Haawking Device</Name>
-  <!--
-  ID是工具组件的唯一标识符，不对外显示，全网唯一
-  -->
   <ID>Hawwking_Device</ID>
-  <!--
-  Vendor是提供该第三方工具的厂商名
-  -->
   <Vendor>Haawking（中科昊芯）</Vendor>
-  <!--
-  URL一般是一个web可访问的网站，用于宣传使用
-  -->
   <URL>http://www.haawking.cn/hx2000</URL>
-  <!--
-  Description用于在CDK中显示对该工具的简单说明
-  -->
   <Description>中科昊芯官方Device系列合集</Description>
-  <!--
-  Version节点用于描述每个具体的资源，可以存在多个Value值不同的Version用来描述该资源的多个版本
-  -->
   <Version Value="V1.0.0">
-    <!--
-    ResourceType支持的类型有 tar.gz / zip / git，本文件不需要该节点
-    -->
     <ResourceType></ResourceType>
     <ResourceURL></ResourceURL>
-    <!--
-    ResourceValidation用于验证ResourceURL的安全性和有效性；
-    如果是tar.gz / zip 类型，这里需要提供MD5值；
-      Windows下面计算文件MD5值，可以直接在Windows CMD命令行中输入：
-      certutil -hashfile D:\your\file\fullpath\fileName.tar.gz MD5
-    如果是git仓库，这里需要提供commit的hash值
-    本文件不需要该节点
-    -->
     <ResourceValidation></ResourceValidation>
-    <!--
-    EnvPath用来设置环境变量，本文件不需要该节点
-    -->
     <EnvPath></EnvPath>
-    <!--
-    Family节点用于描述每个具体的cpu系列，可以存在多个Value值不同的Family用来描述多个系列；
-    Family节点可以多个包含<SubFamily></SubFamily>节点或者单个Devices节点；
-    SubFamily内部可以包含<Devices></Devices>节点，或者包含多个SubFamily节点；层级数目不限制；
-    注意：同一层级Devices与SubFamily不允许同时存在；
-    -->
     <Family Value="RISCV Series">
-      <!--
-      DeviceTree节点描述了一个树结构，在CDK中以树结构展示，根节点是<T-Head>/<Name></Name>节点
-      然后就是DeviceTree节点描述的树
-      -->
       <Devices>
-        <!--
-        每个独立的Device节点描述一个cpu，这里的Name用于UI显示，ID表示实际工具链识别cpu类型
-        -->
         <Device Name="rv32imc_haawking">
-          <!--
-          cpu使用的工具链，default表示默认使用的工具链ID
-          -->
           <Property Name="toolchain" Default="HawwkingLlvmRV32Elf">
-            <!--
-            表示可以支持当前device的工具系列，可以有多个选项，在 https://github.com/CDKModues/ToolchainManifest.git 中
-            toolchain.xml的Series字段值；可选值有通用的RISCV32、RISCV64，也可以有厂商自定义的类型，如CKV1、CKV2；
-            -->
-            <supported-toolchain-series Value="RISCV64"/>
+            <available-toolchain Value="HawwkingLlvmRV32Elf"/>
           </Property>
-          <!--
-          是否支持hardfloat选项，Value值yes：支持，no：不支持
-          -->
           <Property Name="hard-float" Value="no"/>
-          <!--
-          是否支持大端，Value值yes：支持，no：不支持
-          -->
           <Property Name="big-endian" Value="no"/>
-          <!--
-          是否支持半主机调试，Value值yes：支持，no：不支持
-          -->
           <Property Name="semi-host" Value="no"/>
-          <!--
-          表示cpu编译选项
-          例如-mabi=ilp32e -mtune=e902 -march=rv32ecxtheadse，或者-mcpu=ck802
-          -->
           <Property Name="cpu-args" Value="-mabi=ilp32 -march=rv32imc"/>
-          <!--
-          cpu位宽：arch32，arch64
-          -->
           <Property Name="arch-type" Value="arch32"/>
-          <!--
-          device描述官方链接
-          -->
           <Property Name="url" Value="http://www.haawking.cn/28027"/>
-          
-          <!--
-          以下属性属于T-Head专有，其他厂商可以不配置，使用默认值
-          -->
-          
-          <!--
-          cpu是否支持rom配置，对应project settings中target tab的ROM区域配置，
-          默认ck支持，rv不支持；这一属性只在ck中配置，其他不需配置；
-          -->
-          <Property Name="support-rom" Value="no"/>
-          <!--
-          cpu是否支持ram配置，对应project settings中target tab的RAM区域配置，
-          默认ck支持，rv不支持；这一属性只在ck中配置，其他不需配置；
-          -->
-          <Property Name="support-ram" Value="no"/>
-          <!--
-          ck支持的选项，其他cpu不支持；
-          -->
-          <Property Name="enhanced-lrw" Value="no"/>
-          <!--
-          为了兼容cdk New Soc Project的功能；其他厂商不需要这一条
-          csi core头文件，用于替换chip_Name.h中__CSI_CORE_CPU_H__；ck支持，rv不支持;
-          -->
-          <Property Name="csi_core_header" Value=""/>
-          <!--
-          表示是否使用project settings中Target Tab配置的Rom/Ram存取区域，yes：支持，no：不支持
-          -->
-          <Property Name="auto-ld-file" Value="no"/>
-          <!--
-          是否支持模拟器调试，T-Head支持，yes：支持，no：不支持，默认no
-          -->
           <Property Name="sim-connector" Value="yes"/>
-          <!--
-          是否支持生成callgraph file，yes：支持，no：不支持
-          -->
-          <Property Name="support-callgraph" Value="no"/>
-          <!--
-          为了兼容平头哥组件化工程保留的节点，其他厂商不需要这一条；
-          宏定义值，默认为空；例如：<cpu_num>：rv32_16gpr
-          -->
-          <Property Name="cpu-num" Value=""/>
         </Device>
       </Devices>
     </Family>
   </Version>
-  <!--
-  Extend属性描述从哪一个版本继承而来，针对Devices节点，可以不存在该属性，如果包含Extend属性，
-  则添加的device往Extend的版本补充；
-  在同一路径下Series以及Devices，在Extend的节点版本存在的device，覆盖；
-  在Extend的版本不存在的device，添加进去；
-  如果存在Extend属性，则当前Verison的定义需要放在Extend的Version之后；
-  -->
-  <!-- 模板如下
-  <Version Value="V1.0.1" Extend="V1.0.0">
-    <ResourceType></ResourceType>
-    <ResourceURL></ResourceURL>
-    <ResourceValidation></ResourceValidation>
-    <EnvPath></EnvPath>
-    <Family Value="RV900 Series">
-      <Devices>
-        <Device Name="E902M">
-          <Property Name="toolchain" Default="XTGccElfNewlib">
-            <supported-toolchain-series Value="RISCV64"/>
-          </Property>
-          <Property Name="hard-float" Value="no"/>
-          <Property Name="big-endian" Value="no"/>
-          <Property Name="semi-host" Value="no"/>
-          <Property Name="cpu-args" Value="-mabi=ilp32e -mtune=e902 -march=rv32emcxtheadse"/>
-          <Property Name="arch-type" Value="arch32"/>
-          <Property Name="url" Value="https://www.t-head.cn/product/E902"/>
-          <Property Name="support-rom" Value="no"/>
-          <Property Name="support-ram" Value="no"/>
-          <Property Name="enhanced-lrw" Value="no"/>
-          <Property Name="csi_core_header" Value=""/>
-          <Property Name="auto-ld-file" Value="no"/>
-          <Property Name="sim-connector" Value="yes"/>
-          <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value="rv32_16gpr"/>
-        </Device>
-      </Devices>
-    </Family>
-  </Version>
-  -->
 </Device>
