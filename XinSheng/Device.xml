@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device>
+  <Name>XinSheng Device</Name>
+  <ID>XinSheng_Device</ID>
+  <Vendor>XinShengTech（芯昇科技）</Vendor>
+  <URL>https://www.nucleisys.com/product/200.php#cm32m43xr</URL>
+  <Description>芯昇科技官方Device系列合集</Description>
+  <Version Value="V1.0.0">
+    <ResourceType></ResourceType>
+    <ResourceURL></ResourceURL>
+    <ResourceValidation></ResourceValidation>
+    <EnvPath></EnvPath>
+    <Family Value="CM32M43xR Series">
+      <Devices>
+        <Device Name="CM32M4xxR">
+          <Property Name="toolchain" Default="NucleiGccElf">
+            <available-toolchain Value="NucleiGccElf"/>
+          </Property>
+          <Property Name="hard-float" Value="no"/>
+          <Property Name="big-endian" Value="no"/>
+          <Property Name="semi-host" Value="no"/>
+          <Property Name="cpu-args" Value="-mabi=ilp32f -mtune=nuclei-300-series -march=rv32imafcp"/>
+          <Property Name="arch-type" Value="arch32"/>
+          <Property Name="url" Value="https://www.nucleisys.com/product/200.php#cm32m43xr"/>
+          <Property Name="sim-connector" Value="yes"/>
+        </Device>
+      </Devices>
+    </Family>
+  </Version>
+</Device>
