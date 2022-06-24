@@ -10,7 +10,7 @@
     <ResourceURL></ResourceURL>
     <ResourceValidation></ResourceValidation>
     <EnvPath></EnvPath>
-    <Family Value="2 Series">
+    <!--Family Value="2 Series">
       <SubFamily Value="E2 Series">
         <Devices>
           <Device Name="E20">
@@ -20,7 +20,7 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=ilp32 -march=RV32IMC_Zicsr_Zifencei_Zba_Zbb"/>
+            <Property Name="cpu-args" Value="-mabi=ilp32 -march=rv32imc_zicsr_zifencei_zba_zbb"/>
             <Property Name="arch-type" Value="arch32"/>
             <Property Name="url" Value="https://www.sifive.com/cores/e20"/>
           </Device>
@@ -31,7 +31,7 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=ilp32 -march=RV32IMAC_Zicsr_Zifencei_Zba_Zbb"/>
+            <Property Name="cpu-args" Value="-mabi=ilp32 -march=rv32imac_zicsr_zifencei_zba_zbb"/>
             <Property Name="arch-type" Value="arch32"/>
             <Property Name="url" Value="https://www.sifive.com/cores/e21"/>
           </Device>
@@ -42,7 +42,7 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=ilp32f -march=RV32IMAFC_Zicsr_Zifencei_Zba_Zbb"/>
+            <Property Name="cpu-args" Value="-mabi=ilp32f -march=rv32imafc_zicsr_zifencei_zba_zbb"/>
             <Property Name="arch-type" Value="arch32"/>
             <Property Name="url" Value="https://www.sifive.com/cores/e24"/>
           </Device>
@@ -57,13 +57,13 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=lp64 -march=RV64IMAC_Zicsr_Zifencei_Zba_Zbb"/>
+            <Property Name="cpu-args" Value="-mabi=lp64 -march=rv64imac_zicsr_zifencei_zba_zbb"/>
             <Property Name="arch-type" Value="arch64"/>
             <Property Name="url" Value="https://www.sifive.com/cores/s21"/>
           </Device>
         </Devices>
       </SubFamily>
-    </Family>
+    </Family-->
     <Family Value="3 Series">
       <SubFamily Value="E3 Series">
         <Devices>
@@ -74,7 +74,7 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=ilp32 -march=RV32IMAC"/>
+            <Property Name="cpu-args" Value="-mabi=ilp32 -march=rv32imac"/>
             <Property Name="arch-type" Value="arch32"/>
             <Property Name="url" Value="https://www.sifive.com/cores/e31"/>
           </Device>
@@ -85,7 +85,7 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=ilp32f -march=RV32IMAFC"/>
+            <Property Name="cpu-args" Value="-mabi=ilp32f -march=rv32imafc"/>
             <Property Name="arch-type" Value="arch32"/>
             <Property Name="url" Value="https://www.sifive.com/cores/e34"/>
           </Device>
@@ -102,7 +102,7 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=lp64 -march=RV64IMAC"/>
+            <Property Name="cpu-args" Value="-mabi=lp64 -march=rv64imac"/>
             <Property Name="arch-type" Value="arch64"/>
             <Property Name="url" Value="https://www.sifive.com/cores/s51"/>
           </Device>
@@ -113,14 +113,14 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=lp64 -march=RV64GC"/>
+            <Property Name="cpu-args" Value="-mabi=lp64 -march=rv64gc"/>
             <Property Name="arch-type" Value="arch64"/>
             <Property Name="url" Value="https://www.sifive.com/cores/s54"/>
           </Device>
         </Devices>
       </SubFamily>
     </Family>
-    <Family Value="6 Series">
+    <!--Family Value="6 Series">
       <SubFamily Value="E6 Series">
         <Devices>
           <Device Name="E61">
@@ -130,7 +130,7 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=ilp32 -march=RV32IMAC_Zicsr_Zifencei_Zba_Zbb_Sscofpmf"/>
+            <Property Name="cpu-args" Value="-mabi=ilp32 -march=rv32imac_zicsr_zifencei_zba_zbb_sscofpmf"/>
             <Property Name="arch-type" Value="arch32"/>
             <Property Name="url" Value="https://www.sifive.com/cores/e61"/>
           </Device>
@@ -145,14 +145,14 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=lp64 -march=RV64IMAC_Zicsr_Zifencei_Zba_Zbb_Sscofpmf"/>
+            <Property Name="cpu-args" Value="-mabi=lp64 -march=rv64imac_zicsr_zifencei_zba_zbb_sscofpmf"/>
             <Property Name="arch-type" Value="arch64"/>
             <Property Name="url" Value="https://www.sifive.com/cores/s61"/>
           </Device>
         </Devices>
       </SubFamily>
-    </Family>
-    <Family Value="7 Series">
+    </Family-->
+    <!--Family Value="7 Series">
       <SubFamily Value="E7 Series">
         <Devices>
           <Device Name="E76">
@@ -162,7 +162,7 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=ilp32f -march=RV32IMAFC_Zicsr_Zifencei_Zba_Zbb_Sscofpmf"/>
+            <Property Name="cpu-args" Value="-mabi=ilp32f -march=rv32imafc_zicsr_zifencei_zba_zbb_sscofpmf"/>
             <Property Name="arch-type" Value="arch32"/>
             <Property Name="url" Value="https://www.sifive.com/cores/e76"/>
           </Device>
@@ -177,12 +177,12 @@
             <Property Name="hard-float" Value="no"/>
             <Property Name="big-endian" Value="no"/>
             <Property Name="semi-host" Value="no"/>
-            <Property Name="cpu-args" Value="-mabi=lp64 -march=RV64GC_Zba_Zbb_Sscofpmf"/>
+            <Property Name="cpu-args" Value="-mabi=lp64 -march=rv64gc_zba_zbb_sscofpmf"/>
             <Property Name="arch-type" Value="arch64"/>
             <Property Name="url" Value="https://www.sifive.com/cores/s76"/>
           </Device>
         </Devices>
       </SubFamily>
-    </Family>
+    </Family-->
   </Version>
 </Device>
