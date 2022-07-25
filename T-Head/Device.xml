@@ -277,7 +277,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32fd_32gpr"/>
         </Device>
         <Device Name="E906FP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -297,7 +297,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32f_32gpr"/>
         </Device>
         <Device Name="E906P">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -317,7 +317,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32_32gpr"/>
         </Device>
         <Device Name="E907">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -337,7 +337,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32_32gpr"/>
         </Device>
         <Device Name="E907F">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -357,7 +357,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32f_32gpr"/>
         </Device>
         <Device Name="E907FD">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -377,7 +377,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32fd_32gpr"/>
         </Device>
         <Device Name="E907FDP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -397,7 +397,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32fd_32gpr"/>
         </Device>
         <Device Name="E907FP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -417,7 +417,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32f_32gpr"/>
         </Device>
         <Device Name="E907P">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -437,7 +437,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32_32gpr"/>
         </Device>
         <Device Name="C906">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -560,7 +560,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32"/>
         </Device>
         <Device Name="RV32EMC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -579,7 +579,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32"/>
         </Device>
         <Device Name="RV32I">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -598,7 +598,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32"/>
         </Device>
         <Device Name="RV32IC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -617,7 +617,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32"/>
         </Device>
         <Device Name="RV32IM">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -636,7 +636,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32"/>
         </Device>
         <Device Name="RV32IMAC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -655,7 +655,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32"/>
         </Device>
         <Device Name="RV32IMACP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -674,7 +674,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32"/>
         </Device>
         <Device Name="RV32IMAFC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -693,7 +693,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32"/>
         </Device>
         <Device Name="RV32IMAFCP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -731,7 +731,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32"/>
         </Device>
         <Device Name="RV32IMAFDCP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -750,7 +750,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32"/>
         </Device>
         <Device Name="RV32IMC">
           <Property Name="toolchain" Default="XTGccElfNewlib">
@@ -769,7 +769,7 @@
           <Property Name="auto-ld-file" Value="no"/>
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
-          <Property Name="cpu-num" Value=""/>
+          <Property Name="cpu-num" Value="rv32"/>
         </Device>
       </Devices>
     </Family>
