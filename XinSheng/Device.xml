@@ -22,7 +22,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32f -mtune=nuclei-300-series -march=rv32imafcp"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/200.php#cm32m43xr"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
       </Devices>
     </Family>
