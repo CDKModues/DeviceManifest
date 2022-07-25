@@ -22,7 +22,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://doc.nucleisys.com/hbirdv2/core/core.html#core"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="E203E">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -49,7 +48,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imc"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/200.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N201">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -83,7 +81,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/200.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N203E">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -106,7 +103,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/200.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N205E">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -133,7 +129,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-300-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/300.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N300F">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -145,7 +140,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32f -mtune=nuclei-300-series -march=rv32imafc"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/300.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N300FD">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -157,7 +151,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32d -mtune=nuclei-300-series -march=rv32imafdc"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/300.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N305">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -169,7 +162,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-300-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/300.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N307">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -181,7 +173,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32f -mtune=nuclei-300-series -march=rv32imafc"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/300.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N307FD">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -193,7 +184,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32d -mtune=nuclei-300-series -march=rv32imafdc"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/300.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N308">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -205,7 +195,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32f -mtune=nuclei-300-series -march=rv32imafcp"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/300.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
       </Devices>
     </Family>
@@ -221,7 +210,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-600-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/600.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N600F">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -233,7 +221,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32f -mtune=nuclei-600-series -march=rv32imafc"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/600.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N600FD">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -245,7 +232,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32d -mtune=nuclei-600-series -march=rv32imafdc"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/600.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
       </Devices>
     </Family>
@@ -298,7 +284,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-900-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/900.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N900F">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -310,7 +295,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32f -mtune=nuclei-900-series -march=rv32imafc"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/900.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="N900FD">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -322,7 +306,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32d -mtune=nuclei-900-series -march=rv32imafdc"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.nucleisys.com/product/900.php"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
       </Devices>
     </Family>
