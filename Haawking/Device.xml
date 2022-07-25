@@ -22,7 +22,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -march=rv32imc"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="http://www.haawking.cn/28027"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
       </Devices>
     </Family>
