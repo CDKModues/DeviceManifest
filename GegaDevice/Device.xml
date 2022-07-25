@@ -22,7 +22,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103c4t6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103C6T6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -34,7 +33,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103c6t6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103C8T6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -46,7 +44,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103c8t6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103CBT6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -58,7 +55,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103cbt6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103R4T6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -70,7 +66,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103r4t6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103R6T6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -82,7 +77,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103r6t6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103R8T6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -94,7 +88,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103r8t6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103RBT6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -106,7 +99,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103rbt6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103T4U6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -118,7 +110,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103t4u6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103T6U6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -130,7 +121,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103t6u6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103T8U6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -142,7 +132,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103t8u6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103TBU6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -154,7 +143,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103tbu6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103V8T6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -166,7 +154,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103v8t6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
         <Device Name="GD32VF103VBT6">
           <Property Name="toolchain" Default="NucleiGccElf">
@@ -178,7 +165,6 @@
           <Property Name="cpu-args" Value="-mabi=ilp32 -mtune=nuclei-200-series -march=rv32imac"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://www.gigadevice.com/zh-hans/microcontroller/gd32vf103vbt6/"/>
-          <Property Name="sim-connector" Value="yes"/>
         </Device>
       </Devices>
     </Family>
