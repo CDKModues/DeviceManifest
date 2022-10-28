@@ -519,6 +519,26 @@
           <Property Name="support-callgraph" Value="no"/>
           <Property Name="cpu-num" Value="rv64fd_32gpr"/>
         </Device>
+        <Device Name="R910">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+            <available-toolchain Value="XTGccElfNewlib"/>
+          </Property>
+          <Property Name="hard-float" Value="no"/>
+          <Property Name="big-endian" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
+          <Property Name="cpu-args" Value="-mabi=lp64d -mtune=r910 -march=rv64imafdcxtheadc -mcmodel=medany"/>
+          <Property Name="arch-type" Value="arch64"/>
+          <Property Name="url" Value="https://www.t-head.cn/product/C910"/>
+          <Property Name="support-rom" Value="no"/>
+          <Property Name="support-ram" Value="no"/>
+          <Property Name="enhanced-lrw" Value="no"/>
+          <Property Name="csi_core_header" Value=""/>
+          <Property Name="auto-ld-file" Value="no"/>
+          <Property Name="sim-connector" Value="no"/>
+          <Property Name="support-callgraph" Value="no"/>
+          <Property Name="cpu-num" Value="rv64fd_32gpr"/>
+        </Device>
         <Device Name="C920">
           <Property Name="toolchain" Default="XTGccElfNewlib">
             <available-toolchain Value="XTGccElfNewlib"/>
