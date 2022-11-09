@@ -535,7 +535,7 @@
           <Property Name="enhanced-lrw" Value="no"/>
           <Property Name="csi_core_header" Value=""/>
           <Property Name="auto-ld-file" Value="no"/>
-          <Property Name="sim-connector" Value="no"/>
+          <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="no"/>
           <Property Name="cpu-num" Value="rv64fd_32gpr"/>
         </Device>
