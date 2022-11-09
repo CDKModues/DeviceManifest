@@ -684,7 +684,7 @@
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
           <Property Name="semi-host" Value="no"/>
-          <Property Name="cpu-args" Value="-mabi=ilp32 -march=rv32imacpzpsfoperand"/>
+          <Property Name="cpu-args" Value="-mabi=ilp32 -march=rv32imacp"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://riscv.org/exchange/?_sft_exchange_category=core&amp;_sfm_exchange_user_spec=RV32IMAC"/>
           <Property Name="support-rom" Value="no"/>
@@ -722,7 +722,7 @@
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
           <Property Name="semi-host" Value="no"/>
-          <Property Name="cpu-args" Value="-mabi=ilp32f -march=rv32imafcpzpsfoperand"/>
+          <Property Name="cpu-args" Value="-mabi=ilp32f -march=rv32imafcp"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://riscv.org/exchange/?_sft_exchange_category=core&amp;_sfm_exchange_user_spec=RV32IMFC"/>
           <Property Name="support-rom" Value="no"/>
@@ -760,7 +760,7 @@
           <Property Name="hard-float" Value="no"/>
           <Property Name="big-endian" Value="no"/>
           <Property Name="semi-host" Value="no"/>
-          <Property Name="cpu-args" Value="-mabi=ilp32d -march=rv32imafdcpzpsfoperand"/>
+          <Property Name="cpu-args" Value="-mabi=ilp32d -march=rv32imafdcp"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="https://riscv.org/exchange/?_sft_exchange_category=core&amp;_sfm_exchange_user_spec=RV32I(E)MAFDC%202.2"/>
           <Property Name="support-rom" Value="no"/>
