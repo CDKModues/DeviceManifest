@@ -499,6 +499,46 @@
           <Property Name="support-callgraph" Value="no"/>
           <Property Name="cpu-num" Value="rv64fd_32gpr"/>
         </Device>
+				<Device Name="C908">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+            <available-toolchain Value="XTGccElfNewlib"/>
+          </Property>
+          <Property Name="hard-float" Value="no"/>
+          <Property Name="big-endian" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
+          <Property Name="cpu-args" Value="-mabi=lp64d -mtune=c908 -march=rv64imafdc_zihintpause_zfh_zba_zbb_zbc_zbs_xtheadc -mcmodel=medany"/>
+          <Property Name="arch-type" Value="arch64"/>
+          <Property Name="url" Value="https://www.t-head.cn/product/%E7%8E%84%E9%93%81C908"/>
+          <Property Name="support-rom" Value="no"/>
+          <Property Name="support-ram" Value="no"/>
+          <Property Name="enhanced-lrw" Value="no"/>
+          <Property Name="csi_core_header" Value=""/>
+          <Property Name="auto-ld-file" Value="no"/>
+          <Property Name="sim-connector" Value="yes"/>
+          <Property Name="support-callgraph" Value="no"/>
+          <Property Name="cpu-num" Value="rv64fd_32gpr"/>
+        </Device>
+		<Device Name="C908V">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+            <available-toolchain Value="XTGccElfNewlib"/>
+          </Property>
+          <Property Name="hard-float" Value="no"/>
+          <Property Name="big-endian" Value="no"/>
+          <Property Name="semi-host" Value="yes"/>
+          <Property Name="semi-host-option" Value="-local-semi"/>
+          <Property Name="cpu-args" Value="-mabi=lp64d -mtune=c908 -march=rv64imafdcv_zihintpause_zfh_zba_zbb_zbc_zbs_xtheadc -mcmodel=medany"/>
+          <Property Name="arch-type" Value="arch64"/>
+          <Property Name="url" Value="https://www.t-head.cn/product/%E7%8E%84%E9%93%81C908"/>
+          <Property Name="support-rom" Value="no"/>
+          <Property Name="support-ram" Value="no"/>
+          <Property Name="enhanced-lrw" Value="no"/>
+          <Property Name="csi_core_header" Value=""/>
+          <Property Name="auto-ld-file" Value="no"/>
+          <Property Name="sim-connector" Value="yes"/>
+          <Property Name="support-callgraph" Value="no"/>
+          <Property Name="cpu-num" Value="rv64fd_32gpr"/>
+        </Device>
         <Device Name="C910">
           <Property Name="toolchain" Default="XTGccElfNewlib">
             <available-toolchain Value="XTGccElfNewlib"/>
@@ -3831,6 +3871,164 @@
           <Property Name="sim-connector" Value="yes"/>
           <Property Name="support-callgraph" Value="yes"/>
           <Property Name="cpu-num" Value=""/>
+        </Device>
+      </Devices>
+    </Family>
+  </Version>
+    <!--
+  更新RV900系列CPU的 <Property Name="cpu-args">的值，不再使用-mabi= -mtune= -march= 的模式
+  而使用-mcpu代替
+  -->
+  <Version Value="V1.1.0" Extend="V1.0.0">
+    <ResourceType></ResourceType>
+    <ResourceURL></ResourceURL>
+    <ResourceValidation></ResourceValidation>
+    <EnvPath></EnvPath>
+    <Family Value="RV900 Series">
+      <Devices>
+        <Device Name="E902">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+            <available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e902"/>
+        </Device>
+        <Device Name="E902M">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e902m"/>
+        </Device>
+        <Device Name="E902T">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e902t"/>
+        </Device>
+        <Device Name="E902MT">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e902mt"/>
+        </Device>
+        <Device Name="E906">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e906"/>
+        </Device>
+        <Device Name="E906F">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e906f"/>
+        </Device>
+        <Device Name="E906FD">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e906fd"/>
+        </Device>
+        <Device Name="E906FDP">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e906edp"/>
+        </Device>
+        <Device Name="E906FP">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e906fp"/>
+        </Device>
+        <Device Name="E906P">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e906p"/>
+        </Device>
+        <Device Name="E907">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e907"/>
+        </Device>
+        <Device Name="E907F">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e907f"/>
+        </Device>
+        <Device Name="E907FD">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="e907fd"/>
+        </Device>
+        <Device Name="E907FDP">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e907fdp"/>
+        </Device>
+        <Device Name="E907FP">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e907fp"/>
+        </Device>
+        <Device Name="E907P">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=e907p"/>
+        </Device>
+        <Device Name="C906">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=c906"/>
+        </Device>
+        <Device Name="C906FD">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=c906fd"/>
+        </Device>
+        <Device Name="C906FDV">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=c906fdv"/>
+        </Device>
+		<Device Name="C908">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=c908"/>
+        </Device>
+		<Device Name="C908V">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=c908v"/>
+        </Device>
+        <Device Name="C910">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=c910"/>
+        </Device>
+        <Device Name="R910">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=r910"/>
+        </Device>
+        <Device Name="C920">
+          <Property Name="toolchain" Default="XTGccElfNewlib">
+			<available-toolchain Value="XTLLVMElfNewlib"/>
+          </Property>
+          <Property Name="cpu-args" Value="-mcpu=c920"/>
         </Device>
       </Devices>
     </Family>
