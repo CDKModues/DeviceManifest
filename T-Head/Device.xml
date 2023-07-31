@@ -3932,7 +3932,7 @@
           <Property Name="toolchain" Default="XTGccElfNewlib">
 			<available-toolchain Value="XTLLVMElfNewlib"/>
           </Property>
-          <Property Name="cpu-args" Value="-mcpu=e906edp"/>
+          <Property Name="cpu-args" Value="-mcpu=e906fdp"/>
         </Device>
         <Device Name="E906FP">
           <Property Name="toolchain" Default="XTGccElfNewlib">
