@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device>
+  <Name>FDMTEK Device</Name>
+  <ID>FDMTEK_Device</ID>
+  <Vendor>FDMTEK（中科本原）</Vendor>
+  <URL>http://www.fdmtek.com/</URL>
+  <Description>中科本原官方Device系列合集</Description>
+  <Version Value="V1.0.0">
+    <ResourceType></ResourceType>
+    <ResourceURL></ResourceURL>
+    <ResourceValidation></ResourceValidation>
+    <EnvPath></EnvPath>
+    <Family Value="RISCV Series">
+      <Devices>
+        <Device Name="R335">
+          <Property Name="toolchain" Default="FDMTEKLlvmRV32Elf">
+            <available-toolchain Value="FDMTEKLlvmRV32Elf"/>
+          </Property>
+          <Property Name="hard-float" Value="yes"/>
+          <Property Name="big-endian" Value="no"/>
+          <Property Name="semi-host" Value="no"/>
+          <Property Name="cpu-args" Value="--target=riscv32-unknown-elf"/>
+          <Property Name="arch-type" Value="arch32"/>
+          <Property Name="url" Value="http://www.fdmtek.com/low/3.html"/>
+        </Device>
+      </Devices>
+    </Family>
+  </Version>
+</Device>
