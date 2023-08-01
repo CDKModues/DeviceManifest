@@ -3986,49 +3986,49 @@
           <Property Name="toolchain" Default="XTGccElfNewlib">
 			<available-toolchain Value="XTLLVMElfNewlib"/>
           </Property>
-          <Property Name="cpu-args" Value="-mcpu=c906"/>
+          <Property Name="cpu-args" Value="-mcpu=c906 -mcmodel=medany"/>
         </Device>
         <Device Name="C906FD">
           <Property Name="toolchain" Default="XTGccElfNewlib">
 			<available-toolchain Value="XTLLVMElfNewlib"/>
           </Property>
-          <Property Name="cpu-args" Value="-mcpu=c906fd"/>
+          <Property Name="cpu-args" Value="-mcpu=c906fd -mcmodel=medany"/>
         </Device>
         <Device Name="C906FDV">
           <Property Name="toolchain" Default="XTGccElfNewlib">
 			<available-toolchain Value="XTLLVMElfNewlib"/>
           </Property>
-          <Property Name="cpu-args" Value="-mcpu=c906fdv"/>
+          <Property Name="cpu-args" Value="-mcpu=c906fdv -mcmodel=medany"/>
         </Device>
 		<Device Name="C908">
           <Property Name="toolchain" Default="XTGccElfNewlib">
 			<available-toolchain Value="XTLLVMElfNewlib"/>
           </Property>
-          <Property Name="cpu-args" Value="-mcpu=c908"/>
+          <Property Name="cpu-args" Value="-mcpu=c908 -mcmodel=medany"/>
         </Device>
 		<Device Name="C908V">
           <Property Name="toolchain" Default="XTGccElfNewlib">
 			<available-toolchain Value="XTLLVMElfNewlib"/>
           </Property>
-          <Property Name="cpu-args" Value="-mcpu=c908v"/>
+          <Property Name="cpu-args" Value="-mcpu=c908v -mcmodel=medany"/>
         </Device>
         <Device Name="C910">
           <Property Name="toolchain" Default="XTGccElfNewlib">
 			<available-toolchain Value="XTLLVMElfNewlib"/>
           </Property>
-          <Property Name="cpu-args" Value="-mcpu=c910"/>
+          <Property Name="cpu-args" Value="-mcpu=c910 -mcmodel=medany"/>
         </Device>
         <Device Name="R910">
           <Property Name="toolchain" Default="XTGccElfNewlib">
 			<available-toolchain Value="XTLLVMElfNewlib"/>
           </Property>
-          <Property Name="cpu-args" Value="-mcpu=r910"/>
+          <Property Name="cpu-args" Value="-mcpu=r910 -mcmodel=medany"/>
         </Device>
         <Device Name="C920">
           <Property Name="toolchain" Default="XTGccElfNewlib">
 			<available-toolchain Value="XTLLVMElfNewlib"/>
           </Property>
-          <Property Name="cpu-args" Value="-mcpu=c920"/>
+          <Property Name="cpu-args" Value="-mcpu=c920 -mcmodel=medany"/>
         </Device>
       </Devices>
     </Family>
