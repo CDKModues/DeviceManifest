@@ -19,7 +19,7 @@
           <Property Name="hard-float" Value="yes"/>
           <Property Name="big-endian" Value="no"/>
           <Property Name="semi-host" Value="no"/>
-          <Property Name="cpu-args" Value="--target=riscv32-unknown-elf"/>
+          <Property Name="cpu-args" Value="--target=riscv32-unknown-elf -march=rv32imfc_xsc -mabi=ilp32f"/>
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="http://www.fdmtek.com/low/3.html"/>
         </Device>
