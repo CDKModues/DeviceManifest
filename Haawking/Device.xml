@@ -23,7 +23,29 @@
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="http://www.haawking.cn/28027"/>
         </Device>
-        <Device Name="rv32imfc_haawking">
+        <Device Name="HXS320F28027">
+          <Property Name="toolchain" Default="HawwkingLlvmRV32Elf">
+            <available-toolchain Value="HawwkingLlvmRV32Elf"/>
+          </Property>
+          <Property Name="hard-float" Value="no"/>
+          <Property Name="big-endian" Value="no"/>
+          <Property Name="semi-host" Value="no"/>
+          <Property Name="cpu-args" Value="-mabi=ilp32 -march=rv32imc"/>
+          <Property Name="arch-type" Value="arch32"/>
+          <Property Name="url" Value="http://www.haawking.cn/28027"/>
+        </Device>
+        <Device Name="HXS320F28034">
+          <Property Name="toolchain" Default="HawwkingLlvmRV32Elf">
+            <available-toolchain Value="HawwkingLlvmRV32Elf"/>
+          </Property>
+          <Property Name="hard-float" Value="no"/>
+          <Property Name="big-endian" Value="no"/>
+          <Property Name="semi-host" Value="no"/>
+          <Property Name="cpu-args" Value="-mabi=ilp32 -march=rv32imc"/>
+          <Property Name="arch-type" Value="arch32"/>
+          <Property Name="url" Value="http://www.haawking.cn/28034"/>
+        </Device>
+        <Device Name="HXS320F28035">
           <Property Name="toolchain" Default="HawwkingLlvmRV32Elf">
             <available-toolchain Value="HawwkingLlvmRV32Elf"/>
           </Property>
@@ -34,7 +56,7 @@
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="http://www.haawking.cn/280035"/>
         </Device>
-        <Device Name="rv32imfc_haawking_v1.2">
+        <Device Name="HXS320F280025C">
           <Property Name="toolchain" Default="HawwkingLlvmRV32Elf">
             <available-toolchain Value="HawwkingLlvmRV32Elf"/>
           </Property>
@@ -45,7 +67,7 @@
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="http://www.haawking.cn/280025"/>
         </Device>
-        <Device Name="rv32imfc_haawking_v1.3">
+        <Device Name="HXS320F280049C">
           <Property Name="toolchain" Default="HawwkingLlvmRV32Elf">
             <available-toolchain Value="HawwkingLlvmRV32Elf"/>
           </Property>
