@@ -23,6 +23,39 @@
           <Property Name="arch-type" Value="arch32"/>
           <Property Name="url" Value="http://www.haawking.cn/28027"/>
         </Device>
+        <Device Name="rv32imfc_haawking">
+          <Property Name="toolchain" Default="HawwkingLlvmRV32Elf">
+            <available-toolchain Value="HawwkingLlvmRV32Elf"/>
+          </Property>
+          <Property Name="hard-float" Value="no"/>
+          <Property Name="big-endian" Value="no"/>
+          <Property Name="semi-host" Value="no"/>
+          <Property Name="cpu-args" Value="-mabi=ilp32f -march=rv32imfc"/>
+          <Property Name="arch-type" Value="arch32"/>
+          <Property Name="url" Value="http://www.haawking.cn/280035"/>
+        </Device>
+        <Device Name="rv32imfc_haawking_v1.2">
+          <Property Name="toolchain" Default="HawwkingLlvmRV32Elf">
+            <available-toolchain Value="HawwkingLlvmRV32Elf"/>
+          </Property>
+          <Property Name="hard-float" Value="no"/>
+          <Property Name="big-endian" Value="no"/>
+          <Property Name="semi-host" Value="no"/>
+          <Property Name="cpu-args" Value="-mabi=ilp32f -march=rv32imfc_xhaawkaa1p0_xhaawkab1p0_xhaawkac1p0"/>
+          <Property Name="arch-type" Value="arch32"/>
+          <Property Name="url" Value="http://www.haawking.cn/280025"/>
+        </Device>
+        <Device Name="rv32imfc_haawking_v1.3">
+          <Property Name="toolchain" Default="HawwkingLlvmRV32Elf">
+            <available-toolchain Value="HawwkingLlvmRV32Elf"/>
+          </Property>
+          <Property Name="hard-float" Value="no"/>
+          <Property Name="big-endian" Value="no"/>
+          <Property Name="semi-host" Value="no"/>
+          <Property Name="cpu-args" Value="-mabi=ilp32f -march=rv32imfc_xhaawkaa1p0_xhaawkab1p0_xhaawkac1p0_xhaawkad1p0"/>
+          <Property Name="arch-type" Value="arch32"/>
+          <Property Name="url" Value="http://www.haawking.cn/280049"/>
+        </Device>
       </Devices>
     </Family>
   </Version>
