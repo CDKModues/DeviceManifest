@@ -12,7 +12,7 @@
     <EnvPath></EnvPath>
     <Family Value="RISCV Series">
       <Devices>
-        <Device Name="R335">
+        <Device Name="RV335">
           <Property Name="toolchain" Default="FDMTEKLlvmRV32Elf">
             <available-toolchain Value="FDMTEKLlvmRV32Elf"/>
           </Property>
